@@ -90,6 +90,7 @@ See: [Rubocop Editor Integration](https://rubocop.readthedocs.io/en/latest/integ
 * Enable 2FA ([Heroku](https://devcenter.heroku.com/articles/two-factor-authentication), [AWS](https://aws.amazon.com/iam/details/mfa/))
 * Use SSL for serving your content. [QualSys SSL Lab](https://www.ssllabs.com/ssltest/analyze.html) is an excellent tool for verifying your setup
 * Consider the use of different [HTTP headers for added security](https://www.smashingmagazine.com/2017/04/secure-web-app-http-headers/). Use [securityheaders.io](https://securityheaders.io/) for suggestions and further information.
+* [Hardenize](https://www.hardenize.com) gives a nice security overview, good to check occasionally.
 
 ### Additional Resources
 
