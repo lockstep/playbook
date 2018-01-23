@@ -42,7 +42,7 @@ See: [Rubocop Editor Integration](https://rubocop.readthedocs.io/en/latest/integ
 
 ### Check list
 
-* Image optimization (e.g. [ImageOptim](https://imageoptim.com/mac), potentially as pre-commit hook)
+* Image optimization (e.g. [ImageOptim](https://imageoptim.com/mac), see [Essential Image Optimization](https://images.guide) ebook)
 * Use CDN if possible (e.g. S3 + [CloudFront](https://aws.amazon.com/cloudfront/), works well with [asset_sync](https://github.com/AssetSync/asset_sync))
 * Gzip (e.g. [heroku-deflater](https://github.com/romanbsd/heroku-deflater))
 * Cache-Control headers ([time-based](https://devcenter.heroku.com/articles/http-caching-ruby-rails#time-based-cache-headers), [conditional GET](https://devcenter.heroku.com/articles/http-caching-ruby-rails#conditional-cache-headers))
@@ -56,7 +56,7 @@ See: [Rubocop Editor Integration](https://rubocop.readthedocs.io/en/latest/integ
 ### Libraries
 
 * [Oj](https://github.com/ohler55/oj): A fast JSON parser and Object marshaller as a Ruby gem. Drop-in replacement for the bundled JSON gem when used in compat mode.
-* [bootsnap](https://github.com/Shopify/bootsnap): By Shopify. Plugs into a number of Ruby and (optionally) ActiveSupport and YAML methods to optimize and cache expensive computations (beta quality).
+* [bootsnap](https://github.com/Shopify/bootsnap): By Shopify. Plugs into a number of Ruby and (optionally) ActiveSupport and YAML methods to optimize and cache expensive computations (included by default in Rails 5.2+).
 * [rack-mini-profiler](https://github.com/MiniProfiler/rack-mini-profiler): Profiler for your development and production Ruby rack apps (included in our Rails template)
 * [bullet](https://github.com/flyerhzm/bullet): helps to kill N+1 queries and unused eager loading (included in our Rails template)
 
@@ -95,7 +95,7 @@ See: [Rubocop Editor Integration](https://rubocop.readthedocs.io/en/latest/integ
 ### Additional Resources
 
 * [OWASP Ruby on Rails Cheatsheet](https://www.owasp.org/index.php/Ruby_on_Rails_Cheatsheet)
-* [Rails Security Checklist](Rails Security Checklist): Community-driven Rails Security Checklist
+* [Rails Security Checklist](https://github.com/eliotsykes/rails-security-checklist): Community-driven Rails Security Checklist
 * [Zen Rails Security Checklist](https://github.com/brunofacca/zen-rails-security-checklist): An alternatice checklist of security precautions for Ruby on Rails applications
 * [Rails security guide](http://guides.rubyonrails.org/security.html), great resource!
 * [OWASP Top 10](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project)
