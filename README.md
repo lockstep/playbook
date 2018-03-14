@@ -16,6 +16,7 @@
     - [Source Control](#source-control)
     - [Rails](#rails)
     - [Servers](#servers)
+    - [S3](#s3)
     - [Additional Resources](#additional-resources)
 
 ## Product Management
@@ -130,6 +131,48 @@ See: [Rubocop Editor Integration](https://rubocop.readthedocs.io/en/latest/integ
 * Use SSL for serving your content. [QualSys SSL Lab](https://www.ssllabs.com/ssltest/analyze.html) is an excellent tool for verifying your setup
 * Consider the use of different [HTTP headers for added security](https://www.smashingmagazine.com/2017/04/secure-web-app-http-headers/). Use [securityheaders.io](https://securityheaders.io/) for suggestions and further information.
 * [Hardenize](https://www.hardenize.com) gives a nice security overview, good to check occasionally.
+
+### S3
+
+Given that we frequently store assets on S3, the minimum security configuration
+should be one IAM User and one Bucket per environment (development, staging,
+production). Each of these IAM Users (typically machine/ssl-only users, without
+dashboard access) should have a custom Policy specific to the target
+environment. For example the `development-machine` User might have a policy
+as follows:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::myapp-development"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": [
+                "arn:aws:s3:::myapp-development/*"
+            ]
+        }
+    ]
+}
+```
+
+NOTE: You should never grant a machine (or dashboard) user full S3 access. Only
+a client representative or a team lead should have unrestricted access to AWS
+resources.
 
 ### Additional Resources
 
