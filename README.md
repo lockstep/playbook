@@ -1,23 +1,24 @@
 # Lockstep Playbook
+
 - [Lockstep Playbook](#lockstep-playbook)
-  - [Product Management](#product-management)
-    - [General Principles](#general-principles)
-    - [Ticket Tracking Workflow](#ticket-tracking-workflow)
-    - [GitHub Workflow](#github-workflow)
-  - [PR etiquette](#pr-etiquette)
-    - [Contributors](#contributors)
-    - [Reviewers](#reviewers)
-  - [Performance](#performance)
-    - [Check list](#check-list)
-    - [Test page performance](#test-page-performance)
-    - [Libraries](#libraries)
-  - [Security](#security)
-    - [Development machines](#development-machines)
-    - [Source Control](#source-control)
-    - [Rails](#rails)
-    - [Servers](#servers)
-    - [S3](#s3)
-    - [Additional Resources](#additional-resources)
+    - [Product Management](#product-management)
+        - [General Principles](#general-principles)
+        - [Ticket Tracking Workflow](#ticket-tracking-workflow)
+        - [GitHub Workflow](#github-workflow)
+    - [PR etiquette](#pr-etiquette)
+        - [Contributors](#contributors)
+        - [Reviewers](#reviewers)
+    - [Performance](#performance)
+        - [Check list](#check-list)
+        - [Test page performance](#test-page-performance)
+        - [Libraries](#libraries)
+    - [Security](#security)
+        - [Development machines](#development-machines)
+        - [Source Control](#source-control)
+        - [Rails](#rails)
+        - [Servers](#servers)
+        - [S3](#s3)
+        - [Additional Resources](#additional-resources)
 
 ## Product Management
 
@@ -141,7 +142,7 @@ dashboard access) should have a custom Policy specific to the target
 environment. For example the `development-machine` User might have a policy
 as follows:
 
-```
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -173,6 +174,8 @@ as follows:
 NOTE: You should never grant a machine (or dashboard) user full S3 access. Only
 a client representative or a team lead should have unrestricted access to AWS
 resources.
+
+[⬆](#lockstep*playbook)
 
 ### Additional Resources
 
