@@ -88,6 +88,7 @@ See: [Rubocop Editor Integration](https://rubocop.readthedocs.io/en/latest/integ
 * Gzip (e.g. [heroku-deflater](https://github.com/romanbsd/heroku-deflater))
 * Cache-Control headers ([time-based](https://devcenter.heroku.com/articles/http-caching-ruby-rails#time-based-cache-headers), [conditional GET](https://devcenter.heroku.com/articles/http-caching-ruby-rails#conditional-cache-headers))
 * [Fragment caching](http://guides.rubyonrails.org/caching_with_rails.html#fragment-caching) (+ [Russian doll caching](http://guides.rubyonrails.org/caching_with_rails.html#russian-doll-caching) were applicable)
+* Consider using the [loadCSS](https://github.com/filamentgroup/loadCSS) polyfill in combination with [critical](https://github.com/addyosmani/critical)/[penthouse](https://github.com/pocketjoso/penthouse) or similar tools to avoid blocking CSS loads
 
 ### Test page performance
 
