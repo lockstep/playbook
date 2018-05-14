@@ -1,24 +1,24 @@
 # Lockstep Playbook
 
-- [Lockstep Playbook](#lockstep-playbook)
-    - [Product Management](#product-management)
-        - [General Principles](#general-principles)
-        - [Ticket Tracking Workflow](#ticket-tracking-workflow)
-        - [GitHub Workflow](#github-workflow)
-    - [PR etiquette](#pr-etiquette)
-        - [Contributors](#contributors)
-        - [Reviewers](#reviewers)
-    - [Performance](#performance)
-        - [Check list](#check-list)
-        - [Test page performance](#test-page-performance)
-        - [Libraries](#libraries)
-    - [Security](#security)
-        - [Development machines](#development-machines)
-        - [Source Control](#source-control)
-        - [Rails](#rails)
-        - [Servers](#servers)
-        - [S3](#s3)
-        - [Additional Resources](#additional-resources)
+* [Lockstep Playbook](#lockstep-playbook)
+  * [Product Management](#product-management)
+    * [General Principles](#general-principles)
+    * [Ticket Tracking Workflow](#ticket-tracking-workflow)
+    * [GitHub Workflow](#github-workflow)
+  * [PR etiquette](#pr-etiquette)
+    * [Contributors](#contributors)
+    * [Reviewers](#reviewers)
+  * [Performance](#performance)
+    * [Check list](#check-list)
+    * [Test page performance](#test-page-performance)
+    * [Libraries](#libraries)
+  * [Security](#security)
+    * [Development machines](#development-machines)
+    * [Source Control](#source-control)
+    * [Rails](#rails)
+    * [Servers](#servers)
+    * [S3](#s3)
+    * [Additional Resources](#additional-resources)
 
 ## Product Management
 
@@ -26,16 +26,16 @@
 
 * **Over-communicate**: It should be impossible for team leads or clients to be unsure about what you are working on, challenges you are facing, questions you have, assumptions you've made, etc. We employ Loud Productivity<sup>TM</sup> to ensure clients and team members can "hear" how projects are going without having to look closely or investigate to understand what is happening.
 * **Disambiguate Responsibility**: It should be obvious at every step in the life cycle of a JIRA ticket or GitHub PR who is immediately responsible for its completion. See the workflows below regarding ticket assignments and related expectations.
-* **Anticipate Challenges**: It is incumbent upon the developer in charge of a ticket to *understand the business requirements and implementation plan thoroughly ahead of the implementation* and to identify/raise concerns or questions before any code is written. We are frequently 12 time zones away from clients, so frequent back-and-forths about minor issues/concerns throughout the implementation of any given feature require 24-hour cycles and is _devastating_ to timelines and productivity. Ask blocking questions as early as possible to minimize their quantity and their impact on the timeline of the feature. If possible, propose solutions or seek clarification internally before engaging clients directly for input.
+* **Anticipate Challenges**: It is incumbent upon the developer in charge of a ticket to _understand the business requirements and implementation plan thoroughly ahead of the implementation_ and to identify/raise concerns or questions before any code is written. We are frequently 12 time zones away from clients, so frequent back-and-forths about minor issues/concerns throughout the implementation of any given feature require 24-hour cycles and is _devastating_ to timelines and productivity. Ask blocking questions as early as possible to minimize their quantity and their impact on the timeline of the feature. If possible, propose solutions or seek clarification internally before engaging clients directly for input.
 
 ### Ticket Tracking Workflow
 
 * Use JIRA (or a similar PM software) to track discrete business requirements and the process from discovery through completion.
 * Use columns that capture the following intents (at minimum):
-  1. TODO: Tickets that are unassigned but ready for immediate development. These should be estimated (via story points or comparable measure) prior to or soon after being added to the TODO column. Estimate and/or self-assign an unassigned TODO ticket as soon as you are ready to begin development on that ticket.
-  2. IN PROGRESS: This column indicates that **development is active**. Make sure that whatever you are currently working on is in this column and assigned to you. There should never be multiple in-progress tickets assigned to you unless they are in fact both in active development (and potentially should have been one ticket). If something needs clarification or review it _should not be in this column_. If your ticket becomes blocked during implementation, move it to TODO (or another preceding column) and assign it to the blocker, with a comment on the ticket articulating what is needed. It may also be appropriate to put it in the IN REVIEW column if the block depends on a review, to indicate that the ticket is mostly done (or at least work has been started) but input is needed either on the implementation or UX before continuing.
-  3. IN REVIEW: If a PR is open and a review has been requested (see the [GitHub Workflow](#github-workflow) below), the corresponding ticket should be in this column. Similarly, this column may be used for tickets in a QA process (if a separate QA column is not present). Tickets under refactoring or revision based on feedback should move back to IN PROGRESS.
-  4. DONE: Tickets should move to a column indicating completion OR be removed from the view/board after the Review/QA process is completed in order to reduce clutter and facilitate the tracking of total completion time.
+  1.  TODO: Tickets that are unassigned but ready for immediate development. These should be estimated (via story points or comparable measure) prior to or soon after being added to the TODO column. Estimate and/or self-assign an unassigned TODO ticket as soon as you are ready to begin development on that ticket.
+  2.  IN PROGRESS: This column indicates that **development is active**. Make sure that whatever you are currently working on is in this column and assigned to you. There should never be multiple in-progress tickets assigned to you unless they are in fact both in active development (and potentially should have been one ticket). If something needs clarification or review it _should not be in this column_. If your ticket becomes blocked during implementation, move it to TODO (or another preceding column) and assign it to the blocker, with a comment on the ticket articulating what is needed. It may also be appropriate to put it in the IN REVIEW column if the block depends on a review, to indicate that the ticket is mostly done (or at least work has been started) but input is needed either on the implementation or UX before continuing.
+  3.  IN REVIEW: If a PR is open and a review has been requested (see the [GitHub Workflow](#github-workflow) below), the corresponding ticket should be in this column. Similarly, this column may be used for tickets in a QA process (if a separate QA column is not present). Tickets under refactoring or revision based on feedback should move back to IN PROGRESS.
+  4.  DONE: Tickets should move to a column indicating completion OR be removed from the view/board after the Review/QA process is completed in order to reduce clutter and facilitate the tracking of total completion time.
 * You are responsible for **managing your own tickets**. This is the primary means of communicating progress with your team and the client—if you don't have an IN PROGRESS ticket we will safely assume you've just moved something into IN REVIEW and assigned it appropriately or are reviewing other tickets assigned to you.
 * If you are working on a feature or client request that is not explicitly part of your IN PROGRESS ticket or is not even captured in a ticket, **stop**. This frequently manifests as an "urgent" request or "quick fix", and it is tempting to switch off of your current ticket to tackle the "time-sensitive" issue. **DO NOT DO THIS LIGHTLY.** Coordinate with the project lead or make the client aware of the deviation/interruption and _relocate or create tickets as needed_ to reflect the new work.
 * Tickets in JIRA should include references/links to their corresponding GitHub PRs or branches, and vice-versa. It is important for review purposes to navigate between the ticket and its implementation quickly and efficiently.
@@ -60,9 +60,9 @@
 ### Contributors
 
 * Open Pull Requests as soon as possible to give interested people a chance to get involved.
-See: [How we use Pull Requests to build GitHub](https://github.com/blog/1124-how-we-use-pull-requests-to-build-github')
+  See: [How we use Pull Requests to build GitHub](https://github.com/blog/1124-how-we-use-pull-requests-to-build-github')
 * While PRs can be work in progress, they generally should adhere to minimum coding standards, so please include JSLint, ESLint, RuboCop etc. in your editor config.
-See: [Rubocop Editor Integration](https://rubocop.readthedocs.io/en/latest/integration_with_other_tools/)
+  See: [Rubocop Editor Integration](https://rubocop.readthedocs.io/en/latest/integration_with_other_tools/)
 * Before you request a review on a PR, please ensure the following:
   * the code has no obvious errors or bugs
   * the branch has been rebased against the most current version of its merge target and conflicts have been resolved
@@ -145,30 +145,24 @@ as follows:
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "s3:ListBucket"
-            ],
-            "Resource": [
-                "arn:aws:s3:::myapp-development"
-            ]
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "s3:PutObject",
-                "s3:GetObject",
-                "s3:DeleteObject",
-                "s3:PutObjectAcl"
-            ],
-            "Resource": [
-                "arn:aws:s3:::myapp-development/*"
-            ]
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["s3:ListBucket"],
+      "Resource": ["arn:aws:s3:::myapp-development"]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:DeleteObject",
+        "s3:PutObjectAcl"
+      ],
+      "Resource": ["arn:aws:s3:::myapp-development/*"]
+    }
+  ]
 }
 ```
 
