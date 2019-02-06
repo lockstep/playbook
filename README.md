@@ -47,13 +47,13 @@
 ### GitHub Workflow
 
 * Assign Pull Requests to whomever is immediately responsible for the completion of the ticket. If you are still working on the code, you should be the assignee. If you need a review from someone to move forward, **reassign the PR to that reviewer**.
-* Assigned reviewers (usually a team lead or an in-house client developer) should review the PR in a timely fashion or explicitly indicate they will be delayed and potentially re-assign elsewhere or decline to review. The reviewer must **merge or reassign appropriately** after reviewing.
+* Assigned reviewers (usually a team lead or an in-house developer) should review the PR in a timely fashion (within 48 hours) or explicitly indicate/notify that they will be delayed to allow for expeditious re-assignment elsewhere. The reviewer must **merge or reassign appropriately** after reviewing.
 * A Pull Request should always be assigned to exactly one person.
 * Assign a "Reviewer" (the GitHub Reviewer feature) only as a way to request **optional** reviews from that reviewer. Mandatory/blocking reviews are managed via the Assignee feature (as outlined above), so the "Reviewer" function should be used only as an indication to optional reviewers that you are ready for (and want) feedback as time allows.
 * Multiple "Reviewers" are acceptable but review requests should be used conscientiously, sensibly and sparingly. Do not "shotgun" your review requests.
 * **All reviewers** must "Accept Changes" prior to the PR being merged. Thus if an optional reviewer requests changes they become a mandatory/assigned reviewer at some point prior to the merge.
 * If you assign someone to your PR you will also have moved the JIRA ticket to IN REVIEW. _You may remain the assignee on the JIRA ticket_. We don't want to inundate assigned reviewers with notifications and constantly update assignments across multiple systems as PRs go through a review process. But **if a blocking review is taking more than 48 hours** to complete, assigning the PR reviewer in JIRA in addition to GitHub is a polite and appropriate way to spur them on and to indicate who is responsible for moving the ticket forward.
-* DONE tickets are much more valuable than IN PROGRESS tickets. Unless context switching will cause inefficiency, you should prioritize working on tickets that need minor revisions or refactoring after a review rather than beginning or continuing work on a more recent ticket.
+* DONE tickets are much more valuable than IN PROGRESS tickets, both from an immediate functional perspective and given the maintenance overhead of stale branches/merge conflicts. Unless context switching will cause inefficiency, you should prioritize working on tickets that need revisions after a review or reviewing PRs assigned to you rather than beginning or continuing work on a more recent ticket.
 
 ## PR etiquette
 
