@@ -63,6 +63,9 @@
   See: [How we use Pull Requests to build GitHub](https://github.com/blog/1124-how-we-use-pull-requests-to-build-github')
 * While PRs can be work in progress, they generally should adhere to minimum coding standards, so please include JSLint, ESLint, RuboCop etc. in your editor config.
   See: [Rubocop Editor Integration](https://rubocop.readthedocs.io/en/latest/integration_with_other_tools/)
+* Branch Naming and commit message conventions
+  * Branch name should include ticket id and short info about the ticket. ex: '1147-fix-provision-parser'
+  * Write clear and crisp commit message. Commit message description should include the ticket id. ex: 'Contributes to #1147/Closes #1147'
 * Before you request a review on a PR, please ensure the following:
   * the code has no obvious errors or bugs
   * the branch has been rebased against the most current version of its merge target and conflicts have been resolved
