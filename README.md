@@ -70,6 +70,7 @@
   * The code has no obvious errors or bugs
   * The branch has been rebased against the most current version of its merge target and conflicts have been resolved
   * You tested the code both with automated tests and manually
+* Assign **one** person to your PR when you are ready for a formal review. You may add one or more "reviewers" for in-progress feedback but those reviewers are considered optional, the _assignee_ is the person formally responsible for the progress of the PR. Refrain from requesting code reviews outside of the assignee and reviewer mechanisms in Github, it just causes redundant spam, though polite follow-ups in Github, chat or email are acceptable if the reviewer is taking too long to respond.
 * After you merge a PR, please delete the corresponding branch to keep GitHub clean.
 
 ### Reviewers
