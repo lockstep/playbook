@@ -1,4 +1,4 @@
-# Lockstep Playbook
+# Verumex Playbook
 
 * [Lockstep Playbook](#lockstep-playbook)
   * [Product Management](#product-management)
