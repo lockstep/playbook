@@ -5,7 +5,9 @@
     * [General Principles](#general-principles)
     * [Ticket Tracking Workflow](#ticket-tracking-workflow)
     * [GitHub Workflow](#github-workflow)
-  * [PR etiquette](#pr-etiquette)
+  * [Development](#development)
+    * [XTDD](#xtdd)
+  * [PR Etiquette](#pr-etiquette)
     * [Contributors](#contributors)
     * [Reviewers](#reviewers)
   * [Performance](#performance)
@@ -55,7 +57,23 @@
 * If you assign someone to your PR you will also have moved the ticket to IN REVIEW in the ticket tracking software. _You may remain the assignee on the ticket_. We don't want to inundate assigned reviewers with notifications and constantly update assignments across multiple systems as PRs go through a review process. But **if a blocking review is taking more than 48 hours** to complete, assigning the PR reviewer in the ticket tracker in addition to GitHub is a polite and appropriate way to spur them on and to indicate who is responsible for moving the ticket forward.
 * DONE tickets are much more valuable than IN PROGRESS tickets, both from an immediate functional perspective and given the maintenance overhead of stale branches/merge conflicts. Unless context switching will cause inefficiency, you should prioritize working on tickets that need revisions after a review or reviewing PRs assigned to you rather than beginning or continuing work on a more recent ticket.
 
-## PR etiquette
+## Development
+
+### XTDD
+
+Test Driven Development is a frequently mis-used catchall term for development
+practices that incorporate the writing of tests before or during a feature
+implementation workflow. Like many teams we've determined that strict, dogmatic
+TDD is not particularly helpful or productive. That said, **we do use tests
+to drive our development and ensure against regressions**. This section is
+intended to describe our testing philosophy, which can loosely be described as
+a combination of TDD, Acceptance Test Driven Development and Behavior Driven
+Development. Given the broad understanding of these terms we find it is somewhat
+unhelpful to adhere rigorously to one or the other; instead we encourage good
+judgement and a familiarity with the underlying motivations of these different
+but similar test-driven workflows.
+
+## PR Etiquette
 
 ### Contributors
 
