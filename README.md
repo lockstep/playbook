@@ -1,6 +1,6 @@
 # Verumex Playbook
 
-* [Lockstep Playbook](#lockstep-playbook)
+* [Verumex Playbook](#verumex-playbook)
   * [Product Management](#product-management)
     * [General Principles](#general-principles)
     * [Ticket Tracking Workflow](#ticket-tracking-workflow)
